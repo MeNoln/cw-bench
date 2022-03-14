@@ -49,19 +49,23 @@ Supported chains: bombay(testnet), columbus(mainnet)
 
 Output after performing benchmarks:
 ```
+Network: bombay
+
 Contract Address: terra1tz4hl2wlle44u24kk5f3040gxgw7ral6urc78w
 ExecuteMsg: transfer
 	Gas usage in uusd: 26149
 	Gas Limit: 174324
+    Gas Adjustment: 1.75
 	Gas usage in uluna: 1976
 	Gas Limit: 174324
+    Gas Adjustment: 1.75
 
 Contract Address: terra1tz4hl2wlle44u24kk5f3040gxgw7ral6urc78w
 ExecuteMsg: send
 	Gas usage in uusd: 47281
 	Gas Limit: 315201
+    Gas Adjustment: 1.75
 	Gas usage in uluna: 3572
 	Gas Limit: 315201
-
-
+    Gas Adjustment: 1.75
 ```
