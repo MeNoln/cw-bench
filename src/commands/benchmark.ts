@@ -69,6 +69,9 @@ export const handler = async (argv: Arguments<Options>): Promise<void> => {
     const accountInfo = await terraClient.auth.accountInfo(sender);
 
     const sb = new StringBuilder();
+    sb.appendFormat("Network: {0}\n", chainID);
+    sb.appendLine();
+
     for (const benchmark of messages.benchmarks) {
         sb.appendFormat("Contract Address: {0}\n", benchmark.contractAddress);
         sb.appendFormat("ExecuteMsg: {0}\n", Object.keys(benchmark.msg)[0]);
@@ -101,6 +104,7 @@ export const handler = async (argv: Arguments<Options>): Promise<void> => {
             const data = estimatedFee.toData();
             sb.appendFormat("\tGas usage in {0}: {1}\n", data.amount[0].denom, data.amount[0].amount);
             sb.appendFormat("\tGas Limit: {0}\n", data.gas_limit);
+            sb.appendFormat("\tGas Adjustment: {0}\n", network.gasAdjustment);
         }
 
         sb.appendLine();
